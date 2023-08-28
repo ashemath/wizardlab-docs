@@ -1,0 +1,22 @@
+services:
+  wizardlab-docs:
+    build: ./build
+    volumes:
+      - "./build/docs:/docs:rw"
+      - "./wiki/:/docs/source:rw"
+    working_dir: "/doc"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /docs
+        cp conf.py source/conf.py
+        make html 2>&1
+  docs-preview:
+    image: "httpd:bookworm"
+    ports:
+      - "5000:80/tcp"
+    volumes:
+      - "./build/docs/build/html/:/usr/local/apache2/htdocs/"
+
+  
