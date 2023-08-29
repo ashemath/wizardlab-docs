@@ -1,5 +1,5 @@
 services:
-  wizardlab-docs:
+  sphinx:
     build: ./build
     volumes:
       - "./build/docs:/docs:rw"
@@ -13,7 +13,7 @@ services:
         cp conf.py source/conf.py
         make html 2>&1
         rm source/conf.py
-  docs-preview:
+  httpd:
     image: "httpd:bookworm"
     ports:
       - "5000:80/tcp"
