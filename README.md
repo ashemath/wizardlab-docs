@@ -19,7 +19,7 @@ Docker does all the heavy lifting though configuration we set in ``compose.yaml`
 
 The generated html can be examined under ``html/``
 
-![Screenshot of creating documentation pages with wizardlab-docs](/images/sphinx-doc.png)
+![Screenshot of creating documentation pages with wizardlab-docs](/_images/sphinx-doc.png)
 
 ## Resources
 Learn about **.rst**:
