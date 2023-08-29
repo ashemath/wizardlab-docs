@@ -1,3 +1,4 @@
+=====================
 Wizardlab-docs
 =====================
 
@@ -6,6 +7,7 @@ Wizardlab-docs
    :caption: Contents:
    :hidden:
 
-   Welcome.rst
+   Config/index.rst
+   Chapter/index.rst
 
 .. include:: Welcome.rst

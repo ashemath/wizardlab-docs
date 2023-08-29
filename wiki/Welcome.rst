@@ -1,5 +1,5 @@
 Welcome
-_________
+=========
 Wizardlab-docs is a base project for developing static documentation
 pages with Docker and Sphinx.
 

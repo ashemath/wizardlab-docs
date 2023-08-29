@@ -12,6 +12,8 @@ services:
         cd /docs
         cp conf.py source/conf.py
         make html 2>&1
+        rm source/conf.py
+        rm -rf build/html/*
   docs-preview:
     image: "httpd:bookworm"
     ports:
