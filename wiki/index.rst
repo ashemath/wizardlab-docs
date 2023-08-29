@@ -12,3 +12,4 @@ Wizardlab-docs
 
 .. include:: Welcome.rst
 
+.. image:: _images/sphinx-doc.png

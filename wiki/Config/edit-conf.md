@@ -1,5 +1,19 @@
 # Configuring Sphinx
 
+Configuring Sphinx is a matter of adjusting a single file ``conf.py``. 
+This file normally lives under the ``docs/source/`` directory, which 
+is where the source files for your documentation would go.
+
+In wizardlab-docs, I stash a golden-copy of conf.py in the ``build/docs/`` 
+folder, and I copy it over to the container's ``/doc/source/`` just prior to zapping the 
+container with a command ``make html``.
+
+After building the html, I clean up the copied ``conf.py`` prior to mounting
+the html onto the ``httpd`` container. 
+
+To view how we accomplish this shuffling of files, see ``compose.yaml``
+
+
 ## Editing conf.py
  
 The conf.py file that you need to edit lives under `build/docs/conf.py`
@@ -57,6 +71,8 @@ The HTML output options are where you set themes, and define static paths.
 * Static paths are important because they are files that get copied over to 
   Sphinx' ``build/html`` directory.
 
+[sphinx-doc/usage/configuration/options-for-html-output](https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+)
 
 ```python
  # -- Options for HTML output -------------------------------
