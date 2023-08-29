@@ -4,16 +4,15 @@ services:
     volumes:
       - "./build/docs:/docs:rw"
       - "./wiki/:/docs/source:rw"
-    working_dir: "/doc"
+    working_dir: "/docs"
     command:
       - /bin/sh
       - -c
       - |
-        cd /docs
+        rm -rf build/html/*
         cp conf.py source/conf.py
         make html 2>&1
         rm source/conf.py
-        rm -rf build/html/*
   docs-preview:
     image: "httpd:bookworm"
     ports:

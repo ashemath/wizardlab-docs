@@ -11,3 +11,4 @@ Wizardlab-docs
    Chapter/index.rst
 
 .. include:: Welcome.rst
+
